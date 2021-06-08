@@ -1,0 +1,113 @@
+body {
+    background-image: url("photo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+h1 , h3 , p {
+  text-align: left;
+  color:white;
+  font-size:5vw;
+
+}
+h1 {
+font-size: 80px;}
+
+h3{
+font-size: 30px;
+}
+p {
+font-size: 20px;
+}
+
+div {
+  margin-left: 100px;
+  margin-top: 100px;
+
+}
+ul {
+list-style-type: none;
+padding: 20px;
+overflow: hidden;
+background-color: rgb(59, 53, 53);
+margin: -8px;
+
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: rgb(255, 255, 255);
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color: #111;
+}
+.a {
+margin-left: 90px;
+
+
+}
+.a:link, .a:visited {
+background-color: #f44336;
+color: white;
+padding: 14px 25px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+}
+
+.a:hover, .a:active {
+background-color: red;
+}
+@media only screen  and (max-width:600px){
+ul {
+list-style-type: none;
+padding: 10px;
+overflow: hidden;
+background-color: rgb(59, 53, 53);
+margin: -9px;
+margin-right: -43px;
+
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: rgb(255, 255, 255);
+text-align: center;
+padding: 7px 8px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color: #111;
+}
+h1 {
+font-size: 50px;
+}
+h3 {
+font-size: 20px;
+}
+div {
+margin-left: 20px;
+}
+.a {
+margin-left: 30px;
+}
+body {
+    background-image: url("photo.jpg");
+    background-repeat: no-repeat;
+    background-size: 459px 607px;
+   }
+
+
+}

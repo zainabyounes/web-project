@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="master5.css">
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="page1.html">Fashion</a></li>
+        <li><a href="page2.html">Clothes</a></li>
+        <li><a href="page3.html">Accessories</a></li>
+        <li><a href="page4.html">Register</a></li>
+        
+    </ul>
+    <br>
+    <h1>To contact us and follow up on all the latest news 
+        about fashion, you must fill out this form with the required conditions</h1>
+    <img src="mm.jpeg" alt="photo">
+    <form action="page2.html" onsubmit="return checkPassword(this);">
+        <div>
+            <label><b>First Name</b></label>
+            <input type="text" required>
+        </div>
+        <br>
+        <div>
+            <label><b>Last Name</b></label>
+            <input type="text" required>
+        </div>
+        <br>
+        <div>
+            <label><b>Email</b></label>
+            <input type="email" required>
+        </div>
+        <br>
+        <div>
+            <label><b>Mobile Phone Number</b></label>
+            <input type="tel" id="phone" name="phone" pattern="[0]{1}[1]{1}[0-9]{9}" required>
+        </div>
+        <br>
+        <div>
+            <label><b>Address</b></label>
+            <input type="text" required>
+        </div>
+        <br>
+        <label><b>Select your gender :</b></label>
+        <br>
+        <br>
+        <select required>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        <br>
+        <br>
+        <label><b>Password</b></label>
+        <input type="password" id="pw" name="pw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]{1})(?=.*){1}.{8}" title="It must contain 8 characters starting with uppercase letter and including at least one digit, one of these special character (#,*,_,&,-) and no spaces." required>
+        <br>
+        <br>
+        <a href="page2.html">
+        <input type="submit" >
+        </a>
+    </form>
+    <script type="text/javascript">
+
+        function checkPassword(form)
+        {
+            if(form.pw.value.length != 8) {
+              alert("Error: password must contain 8 characters! Check the password title, please.");
+              return false;
+            }
+           
+            if(form.pw.value.charAt(0) != form.pw.value.charAt(0).toUpperCase() 
+          || Number(form.pw.value.charAt(0)) || form.pw.value.charAt(0)=="-" 
+          || form.pw.value.charAt(0)=="_" || form.pw.value.charAt(0)=="*" || 
+          form.pw.value.charAt(0)=="#" || form.pw.value.charAt(0)=="&" || 
+          form.pw.value.charAt(0)==" "){
+              alert("Error: password must start with uppercase letter (A-Z)! Check the password title, please.");
+              return false;
+       
+      }
+          var i="1";
+            while(!Number(form.pw.value.charAt(i))){
+              i++;
+              if(i==8){
+              alert("Error: password must include at least one digit (0-9)! Check the password title, please.");
+              return false;
+              break;
+             }
+              else continue;
+           }
+          var i="1";
+            while(form.pw.value.charAt(i) !="-" && form.pw.value.charAt(i) !="_" && 
+             form.pw.value.charAt(i) !="#" && form.pw.value.charAt(i) !="&" &&
+             form.pw.value.charAt(i) !="*" || form.pw.value.charAt(i) ==" "){
+              i++;
+              if(i==8){
+              alert("Error: password must include a special character and no spaces! Check the password title, please.");
+              return false;
+              break;
+             }
+             else continue;
+     }
+      alert("You entered a valid password: " + form.pw.value);
+      alert("Thank you for your submition " + form.fname.value + ",we'll send you our notification day by day on this new added email.")
+    return true;
+  }
+            
+      
+      </script>
+</body>
+</html>
